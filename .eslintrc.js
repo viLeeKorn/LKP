@@ -1,4 +1,8 @@
 module.exports = {
-  root: true,
-  extends: '@react-native',
+    parser: '@babel/eslint-parser',
+    plugins: ['react', 'react-native'],
+    env: {
+        'react-native/react-native': true,
+    },
+    extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:react-native/all'],
 };
