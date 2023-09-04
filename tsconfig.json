@@ -1,4 +1,5 @@
 {
+    "extends": "@tsconfig/react-native/tsconfig.json",
     "compilerOptions": {
         "baseUrl": "./",
         "allowJs": true,
@@ -11,7 +12,10 @@
         "resolveJsonModule": true,
         "noEmit": true,
         "strict": true,
-        "target": "esnext"
+        "target": "esnext",
+        "paths": {
+            "/*": ["src/*"]
+        }
     },
     "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
 }

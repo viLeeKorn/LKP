@@ -1,5 +1,15 @@
 module.exports = {
-    parser: '@babel/eslint-parser',
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        project: './tsconfig.json',
+        sourceType: 'module',
+    },
+    settings: {
+        'import/ignore': ['react-native'],
+        'import/resolver': {
+            typescript: {},
+        },
+    },
     plugins: ['react', 'react-native'],
     env: {
         'react-native/react-native': true,
